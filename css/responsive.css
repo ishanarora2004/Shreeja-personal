@@ -1,0 +1,90 @@
+/* Responsive Media Queries */
+
+@media (max-width: 1024px) {
+    .hero-name {
+        font-size: 3.5rem;
+    }
+    section {
+        padding: 60px 30px 20px;
+    }
+    .timeline-item {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar Mobile Menu */
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0; left: 100%; width: 100%; height: 100vh;
+        background: rgba(255, 240, 245, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        transition: left 0.3s ease;
+    }
+    .nav-links.active {
+        left: 0;
+    }
+    
+    /* Hero section */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-right {
+        margin-top: 50px;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn.pill-btn {
+        margin-right: 0;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* About section */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Timeline */
+    .timeline-line {
+        left: 30px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    .timeline-item.left, .timeline-item.right {
+        left: 0;
+        text-align: left;
+    }
+    .timeline-dot {
+        left: 15px !important;
+        right: auto !important;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    /* Disable custom cursor on mobile touching */
+    #cursor-dot, #cursor-ring {
+        display: none !important;
+    }
+    html, a, button {
+        cursor: auto !important;
+    }
+}
